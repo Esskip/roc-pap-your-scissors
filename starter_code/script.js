@@ -4,6 +4,19 @@ var aiPoint = 0;
 // This function returns the selection of the computer
 function getAISelection() {
     //TODO: randomly choose between 'rock', 'paper', or 'scissors'
+    
+    var random= Math.floor((Math.random()*9)+1);
+    
+    if(random<4) {
+        console.log("rock");
+        
+    } else if (random<7) {
+        
+       console.log("paper");
+    } else {
+        console.log("scissors");
+    }
+    
 }
 
 // This function picks the winner
@@ -22,6 +35,7 @@ function evaluate(evt) {
     var userValue = evt.target.getAttribute('id');
     var aiValue = getAISelection();
 
+
     var winner = pickWinner(userValue, aiValue);
 
     if ( 'user' === winner ) {
@@ -35,5 +49,10 @@ function evaluate(evt) {
 
 // This function runs on page load
 $(document).ready(function(){
-
+    var chooseType = function(e) {
+        console.log
+    }
+    $('.token').on('click', function(e) {
+        
+    })
 });
